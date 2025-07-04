@@ -1,0 +1,330 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "discord",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncIOScheduler",
+        "importPath": "apscheduler.schedulers.asyncio",
+        "description": "apscheduler.schedulers.asyncio",
+        "isExtraImport": true,
+        "detail": "apscheduler.schedulers.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "aiohttp",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "process",
+        "importPath": "rapidfuzz",
+        "description": "rapidfuzz",
+        "isExtraImport": true,
+        "detail": "rapidfuzz",
+        "documentation": {}
+    },
+    {
+        "label": "gTTS",
+        "importPath": "gtts",
+        "description": "gtts",
+        "isExtraImport": true,
+        "detail": "gtts",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "venv.bin.activate_this",
+        "description": "venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len('bin') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.10/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": "venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "venv.bin.activate_this",
+        "description": "venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len('bin') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.10/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)",
+        "detail": "venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "venv.bin.activate_this",
+        "description": "venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.10/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": "venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "venv.bin.activate_this",
+        "description": "venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.10/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": "venv.bin.activate_this",
+        "description": "venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '../lib/python3.10/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "venv.bin.activate_this",
+        "description": "venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in '../lib/python3.10/site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "venv.bin.activate_this",
+        "description": "venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "venv.bin.activate_this",
+        "description": "venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "venv.bin.activate_this",
+        "description": "venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "canal_restrito",
+        "kind": 2,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "def canal_restrito():\n    async def predicate(ctx):\n        return ctx.channel.name == CANAL_COMANDOS\n    return commands.check(predicate)\n# 🔊 Função de tocar o áudio (precisa vir antes do uso no scheduler)\nasync def play_audio():\n    print(\"🎵 Iniciando reprodução de áudio...\")\n    guild = bot.get_guild(GUILD_ID)\n    voice_channel = guild.get_channel(VOICE_CHANNEL_ID)\n    if voice_channel is not None:",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "TOKEN",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "TOKEN = os.getenv(\"DISCORD_TOKEN\")\nURL_BOT = os.getenv(\"URL_BOT\", \"https://example.com\")  # URL do bot, se necessário\nGUILD_ID = os.getenv(\"GUILD_ID\")  # ID do servidor\nVOICE_CHANNEL_ID = os.getenv(\"VOICE_CHANNEL_ID\")  # ID do canal de voz\nAUDIO_PATH_GALO = 'audios/galo.mp3'\nAUDIO_PATH_1 = 'among-reuniao.mp3'\nAUDIO_PATH_2 = 'daily_MQIyyuS.mp3'\nCANAL_COMANDOS = \"comandos\"\nAUDIO_FOLDER = 'audios'\nintents = discord.Intents.default()",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "URL_BOT",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "URL_BOT = os.getenv(\"URL_BOT\", \"https://example.com\")  # URL do bot, se necessário\nGUILD_ID = os.getenv(\"GUILD_ID\")  # ID do servidor\nVOICE_CHANNEL_ID = os.getenv(\"VOICE_CHANNEL_ID\")  # ID do canal de voz\nAUDIO_PATH_GALO = 'audios/galo.mp3'\nAUDIO_PATH_1 = 'among-reuniao.mp3'\nAUDIO_PATH_2 = 'daily_MQIyyuS.mp3'\nCANAL_COMANDOS = \"comandos\"\nAUDIO_FOLDER = 'audios'\nintents = discord.Intents.default()\nintents.voice_states = True",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "GUILD_ID",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "GUILD_ID = os.getenv(\"GUILD_ID\")  # ID do servidor\nVOICE_CHANNEL_ID = os.getenv(\"VOICE_CHANNEL_ID\")  # ID do canal de voz\nAUDIO_PATH_GALO = 'audios/galo.mp3'\nAUDIO_PATH_1 = 'among-reuniao.mp3'\nAUDIO_PATH_2 = 'daily_MQIyyuS.mp3'\nCANAL_COMANDOS = \"comandos\"\nAUDIO_FOLDER = 'audios'\nintents = discord.Intents.default()\nintents.voice_states = True\nintents.guilds = True",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "VOICE_CHANNEL_ID",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "VOICE_CHANNEL_ID = os.getenv(\"VOICE_CHANNEL_ID\")  # ID do canal de voz\nAUDIO_PATH_GALO = 'audios/galo.mp3'\nAUDIO_PATH_1 = 'among-reuniao.mp3'\nAUDIO_PATH_2 = 'daily_MQIyyuS.mp3'\nCANAL_COMANDOS = \"comandos\"\nAUDIO_FOLDER = 'audios'\nintents = discord.Intents.default()\nintents.voice_states = True\nintents.guilds = True\nintents.message_content = True",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "AUDIO_PATH_GALO",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "AUDIO_PATH_GALO = 'audios/galo.mp3'\nAUDIO_PATH_1 = 'among-reuniao.mp3'\nAUDIO_PATH_2 = 'daily_MQIyyuS.mp3'\nCANAL_COMANDOS = \"comandos\"\nAUDIO_FOLDER = 'audios'\nintents = discord.Intents.default()\nintents.voice_states = True\nintents.guilds = True\nintents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "AUDIO_PATH_1",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "AUDIO_PATH_1 = 'among-reuniao.mp3'\nAUDIO_PATH_2 = 'daily_MQIyyuS.mp3'\nCANAL_COMANDOS = \"comandos\"\nAUDIO_FOLDER = 'audios'\nintents = discord.Intents.default()\nintents.voice_states = True\nintents.guilds = True\nintents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)\nscheduler = AsyncIOScheduler()",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "AUDIO_PATH_2",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "AUDIO_PATH_2 = 'daily_MQIyyuS.mp3'\nCANAL_COMANDOS = \"comandos\"\nAUDIO_FOLDER = 'audios'\nintents = discord.Intents.default()\nintents.voice_states = True\nintents.guilds = True\nintents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)\nscheduler = AsyncIOScheduler()\ndef canal_restrito():",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "CANAL_COMANDOS",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "CANAL_COMANDOS = \"comandos\"\nAUDIO_FOLDER = 'audios'\nintents = discord.Intents.default()\nintents.voice_states = True\nintents.guilds = True\nintents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)\nscheduler = AsyncIOScheduler()\ndef canal_restrito():\n    async def predicate(ctx):",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "AUDIO_FOLDER",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "AUDIO_FOLDER = 'audios'\nintents = discord.Intents.default()\nintents.voice_states = True\nintents.guilds = True\nintents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)\nscheduler = AsyncIOScheduler()\ndef canal_restrito():\n    async def predicate(ctx):\n        return ctx.channel.name == CANAL_COMANDOS",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "intents",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "intents = discord.Intents.default()\nintents.voice_states = True\nintents.guilds = True\nintents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)\nscheduler = AsyncIOScheduler()\ndef canal_restrito():\n    async def predicate(ctx):\n        return ctx.channel.name == CANAL_COMANDOS\n    return commands.check(predicate)",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "intents.voice_states",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "intents.voice_states = True\nintents.guilds = True\nintents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)\nscheduler = AsyncIOScheduler()\ndef canal_restrito():\n    async def predicate(ctx):\n        return ctx.channel.name == CANAL_COMANDOS\n    return commands.check(predicate)\n# 🔊 Função de tocar o áudio (precisa vir antes do uso no scheduler)",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "intents.guilds",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "intents.guilds = True\nintents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)\nscheduler = AsyncIOScheduler()\ndef canal_restrito():\n    async def predicate(ctx):\n        return ctx.channel.name == CANAL_COMANDOS\n    return commands.check(predicate)\n# 🔊 Função de tocar o áudio (precisa vir antes do uso no scheduler)\nasync def play_audio():",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "intents.message_content",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "intents.message_content = True\nbot = commands.Bot(command_prefix=\"!\", intents=intents)\nscheduler = AsyncIOScheduler()\ndef canal_restrito():\n    async def predicate(ctx):\n        return ctx.channel.name == CANAL_COMANDOS\n    return commands.check(predicate)\n# 🔊 Função de tocar o áudio (precisa vir antes do uso no scheduler)\nasync def play_audio():\n    print(\"🎵 Iniciando reprodução de áudio...\")",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "bot",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "bot = commands.Bot(command_prefix=\"!\", intents=intents)\nscheduler = AsyncIOScheduler()\ndef canal_restrito():\n    async def predicate(ctx):\n        return ctx.channel.name == CANAL_COMANDOS\n    return commands.check(predicate)\n# 🔊 Função de tocar o áudio (precisa vir antes do uso no scheduler)\nasync def play_audio():\n    print(\"🎵 Iniciando reprodução de áudio...\")\n    guild = bot.get_guild(GUILD_ID)",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "scheduler",
+        "kind": 5,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "scheduler = AsyncIOScheduler()\ndef canal_restrito():\n    async def predicate(ctx):\n        return ctx.channel.name == CANAL_COMANDOS\n    return commands.check(predicate)\n# 🔊 Função de tocar o áudio (precisa vir antes do uso no scheduler)\nasync def play_audio():\n    print(\"🎵 Iniciando reprodução de áudio...\")\n    guild = bot.get_guild(GUILD_ID)\n    voice_channel = guild.get_channel(VOICE_CHANNEL_ID)",
+        "detail": "bot",
+        "documentation": {}
+    }
+]

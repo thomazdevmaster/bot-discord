@@ -1,0 +1,5 @@
+discord.py
+apscheduler
+PyNaCl==1.5.0
+rapidfuzz==3.13.0
+gTTS==2.5.4
