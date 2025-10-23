@@ -52,6 +52,7 @@ VOICE_CHANNEL_ID=123456789012345678       # Canal de voz padrão para o áudio a
 VOICE_CHANNEL_ID_1=123456789012345678     # Canal de voz para a mensagem semanal
 MESSAGE_CHANNEL_1=123456789012345678      # Canal de texto para a mensagem semanal
 CARGO_ID=123456789012345678               # ID do cargo a ser mencionado (ex: equipe)
+GOOGLE_API_KEY=123456789                  # Chave da API do Google
 ```
 
 ▶️ Executando o Bot
