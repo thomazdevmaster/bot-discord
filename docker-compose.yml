@@ -1,8 +1,12 @@
 version: '3.8'
 services:
   discord-bot:
-    build: .
-    image: thomazfsj/zetta-bot:0.0.1
-    env_file: .env
+    image: thomazfsj/zetta-bot:0.0.5
+    env_file:
+      - .env
     restart: unless-stopped
-    
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    volumes:
+      - ./audios:/app/audios

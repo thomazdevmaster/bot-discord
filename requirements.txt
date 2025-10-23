@@ -3,3 +3,6 @@ apscheduler
 PyNaCl==1.5.0
 rapidfuzz==3.13.0
 gTTS==2.5.4
+google-generativeai==0.8.5
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.27.1
